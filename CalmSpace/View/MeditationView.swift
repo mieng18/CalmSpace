@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MeditationView: View {
-    
+    @StateObject var meditationVM: MeditationViewModel
     @State private var showPlayer = false
     
     var body: some View {
         
         VStack {
-            Image("rocks-stacked")
+            Image(meditationVM.meditation.image)
                 .resizable()
                 .scaledToFill()
                 .frame(height: UIScreen.main.bounds.height/3)
@@ -26,13 +26,15 @@ struct MeditationView: View {
                 VStack(alignment: .leading,spacing:24) {
                     VStack(alignment: .leading,spacing:8) {
                         Text("Music")
-                        Text("0s")
+                        Text(DateComponentsFormatter.abbreviated.string(from: meditationVM.meditation.duration) ??  meditationVM.meditation.duration.formatted() + "S")
                     }
                     .font(.subheadline)
                     .textCase(.uppercase)
                     .opacity(0.7)
                     
-                    Text("1 Minute Relaxing Meditation")
+                    // MARK: Title
+                    
+                    Text(meditationVM.meditation.title)
                         .font(.title)
                     
                    
@@ -54,8 +56,9 @@ struct MeditationView: View {
                     .cornerRadius(20)
 
                 
-                    
-                    Text("Allow your breath to flow naturally, without trying to control it. Observe the rhythm and depth of each breath.")
+                    // MARK: Description
+
+                    Text(meditationVM.meditation.description)
                     
                     Spacer()
                 }
@@ -64,14 +67,15 @@ struct MeditationView: View {
             }
             .ignoresSafeArea()
             .fullScreenCover(isPresented: $showPlayer) {
-                PlayerView()
+                PlayerView(meditationVM: meditationVM)
             }
         }
     }
 }
 
 struct MeditationView_Previews: PreviewProvider {
+    static let meditationVM = MeditationViewModel(meditation: Meditation.data)
     static var previews: some View {
-        MeditationView()
+        MeditationView(meditationVM: meditationVM)
     }
 }
