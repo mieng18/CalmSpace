@@ -35,7 +35,7 @@ struct MeditationView: View {
                     // MARK: Title
                     
                     Text(meditationVM.meditation.title)
-                        .font(.title)
+                        .font(.title2)
                     
                    
                     
@@ -65,10 +65,12 @@ struct MeditationView: View {
                 .foregroundColor(.white)
                 .padding(20)
             }
-            .ignoresSafeArea()
-            .fullScreenCover(isPresented: $showPlayer) {
-                PlayerView(meditationVM: meditationVM)
-            }
+            .frame(height: UIScreen.main.bounds.height * 2/3)
+            
+        }
+        .ignoresSafeArea()
+        .fullScreenCover(isPresented: $showPlayer) {
+            PlayerView(meditationVM: meditationVM)
         }
     }
 }

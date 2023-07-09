@@ -12,7 +12,7 @@ struct CalmSpaceApp: App {
     @StateObject var audioManager = AudioManager()
     var body: some Scene {
         WindowGroup {
-            MeditationView(meditationVM: MeditationViewModel(meditation: Meditation.data))
+           ContentView()
                 .environmentObject(audioManager)
         }
     }
