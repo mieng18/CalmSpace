@@ -21,7 +21,7 @@
 		CABFE7EC2A5A3D8F00FA80EE /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7EB2A5A3D8F00FA80EE /* Meditation.swift */; };
 		CABFE7EF2A5A413600FA80EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7EE2A5A413600FA80EE /* Extensions.swift */; };
 		CABFE7F22A5B499F00FA80EE /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7F12A5B499F00FA80EE /* AudioManager.swift */; };
-		CABFE7F42A5B4ACA00FA80EE /* meditation-file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */; };
+		CABFE7F72A5B6C1100FA80EE /* relax-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CABFE7F62A5B6C1100FA80EE /* relax-music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		CABFE7EB2A5A3D8F00FA80EE /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		CABFE7EE2A5A413600FA80EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CABFE7F12A5B499F00FA80EE /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "meditation-file.mp3"; sourceTree = "<group>"; };
 		CABFE7F52A5B4BCB00FA80EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CABFE7F62A5B6C1100FA80EE /* relax-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relax-music.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 				CABFE7E22A5A2D5800FA80EE /* View */,
 				CABFE7B62A5A22CD00FA80EE /* CalmSpaceApp.swift */,
 				CABFE7B82A5A22CD00FA80EE /* ContentView.swift */,
-				CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */,
 				CABFE7BA2A5A22D000FA80EE /* Assets.xcassets */,
 				CABFE7BC2A5A22D000FA80EE /* Preview Content */,
 			);
@@ -165,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CABFE7E82A5A3D3B00FA80EE /* MeditationViewModel.swift */,
+				CABFE7F12A5B499F00FA80EE /* AudioManager.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 		CABFE7F02A5B497600FA80EE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				CABFE7F12A5B499F00FA80EE /* AudioManager.swift */,
+				CABFE7F62A5B6C1100FA80EE /* relax-music.mp3 */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -298,8 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABFE7BE2A5A22D000FA80EE /* Preview Assets.xcassets in Resources */,
+				CABFE7F72A5B6C1100FA80EE /* relax-music.mp3 in Resources */,
 				CABFE7BB2A5A22D000FA80EE /* Assets.xcassets in Resources */,
-				CABFE7F42A5B4ACA00FA80EE /* meditation-file.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
