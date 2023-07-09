@@ -10,6 +10,7 @@ import SwiftUI
 struct PlayerView: View {
     
     @State private var value: Double = 0.0
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         
         ZStack {
@@ -19,13 +20,22 @@ struct PlayerView: View {
                 .frame(width: UIScreen.main.bounds.width)
                 .ignoresSafeArea()
             
+            
+            // MARK: Blur View
+            
+            Rectangle()
+                .background(.thinMaterial)
+                .opacity(0.25)
+                .ignoresSafeArea()
+            
             VStack(spacing:32) {
                 
                 HStack{
                     Button{
+                        dismiss()
                         
                     }label: {
-                        Image(systemName: "xmarl.circle.fill")
+                        Image(systemName: "xmark.circle.fill")
                             .font(.system(size:36))
                             .foregroundColor(.white)
                         
@@ -58,14 +68,40 @@ struct PlayerView: View {
                     }
                     .font(.caption)
                     .foregroundColor(.white)
+                }
+                
+                HStack{
+                    PlaybackControlButton(systemName: "repeat") {
+                       
+                    }
+                    Spacer()
                     
+                    PlaybackControlButton(systemName: "gobackward.10") {
+                       
+                    }
                     
+                    Spacer()
+
+                    PlaybackControlButton(systemName: "play.circle.fill") {
+                       
+                    }
+                    
+                    Spacer()
+                    
+                    PlaybackControlButton(systemName: "goforward.10") {
+                       
+                    }
+                    
+                    Spacer()
+                    
+                    PlaybackControlButton(systemName: "stop.fill") {
+                       
+                    }
                 }
                 
             }
             .padding(20)
         }
-        .ignoresSafeArea()
 
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct CalmSpaceApp: App {
     var body: some Scene {
         WindowGroup {
-            PlayerView()
+            MeditationView()
         }
     }
 }
