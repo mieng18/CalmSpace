@@ -20,6 +20,8 @@
 		CABFE7E92A5A3D3B00FA80EE /* MeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7E82A5A3D3B00FA80EE /* MeditationViewModel.swift */; };
 		CABFE7EC2A5A3D8F00FA80EE /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7EB2A5A3D8F00FA80EE /* Meditation.swift */; };
 		CABFE7EF2A5A413600FA80EE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7EE2A5A413600FA80EE /* Extensions.swift */; };
+		CABFE7F22A5B499F00FA80EE /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABFE7F12A5B499F00FA80EE /* AudioManager.swift */; };
+		CABFE7F42A5B4ACA00FA80EE /* meditation-file.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		CABFE7E82A5A3D3B00FA80EE /* MeditationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewModel.swift; sourceTree = "<group>"; };
 		CABFE7EB2A5A3D8F00FA80EE /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		CABFE7EE2A5A413600FA80EE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CABFE7F12A5B499F00FA80EE /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "meditation-file.mp3"; sourceTree = "<group>"; };
+		CABFE7F52A5B4BCB00FA80EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +111,15 @@
 		CABFE7B52A5A22CD00FA80EE /* CalmSpace */ = {
 			isa = PBXGroup;
 			children = (
+				CABFE7F52A5B4BCB00FA80EE /* Info.plist */,
+				CABFE7F02A5B497600FA80EE /* Helper */,
 				CABFE7ED2A5A412400FA80EE /* Extensions */,
 				CABFE7EA2A5A3D8400FA80EE /* Model */,
 				CABFE7E72A5A3D2500FA80EE /* View Model */,
 				CABFE7E22A5A2D5800FA80EE /* View */,
 				CABFE7B62A5A22CD00FA80EE /* CalmSpaceApp.swift */,
 				CABFE7B82A5A22CD00FA80EE /* ContentView.swift */,
+				CABFE7F32A5B4ACA00FA80EE /* meditation-file.mp3 */,
 				CABFE7BA2A5A22D000FA80EE /* Assets.xcassets */,
 				CABFE7BC2A5A22D000FA80EE /* Preview Content */,
 			);
@@ -175,6 +183,14 @@
 				CABFE7EE2A5A413600FA80EE /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CABFE7F02A5B497600FA80EE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CABFE7F12A5B499F00FA80EE /* AudioManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +299,7 @@
 			files = (
 				CABFE7BE2A5A22D000FA80EE /* Preview Assets.xcassets in Resources */,
 				CABFE7BB2A5A22D000FA80EE /* Assets.xcassets in Resources */,
+				CABFE7F42A5B4ACA00FA80EE /* meditation-file.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +330,7 @@
 				CABFE7EF2A5A413600FA80EE /* Extensions.swift in Sources */,
 				CABFE7B72A5A22CD00FA80EE /* CalmSpaceApp.swift in Sources */,
 				CABFE7E42A5A2D7300FA80EE /* PlayerView.swift in Sources */,
+				CABFE7F22A5B499F00FA80EE /* AudioManager.swift in Sources */,
 				CABFE7EC2A5A3D8F00FA80EE /* Meditation.swift in Sources */,
 				CABFE7E92A5A3D3B00FA80EE /* MeditationViewModel.swift in Sources */,
 			);
@@ -475,6 +493,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CalmSpace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalmSpace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,6 +522,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CalmSpace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalmSpace/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
